@@ -1,0 +1,894 @@
+1)FATORIAL
+
+O fatorial de um número inteiro positivo N, denotado por N!, ?é definido como o produto dos inteiros positivos menores do que ou iguais a N. Por exemplo 4! = 4 × 3×2×1 = 24. Dado um inteiro positivo N, você deve escrever um programa para determinar o menor número k tal que N = a1! +a2! +. . .+ak!, onde cada ai, para 1?i?k, e um número inteiro positivo. Por exemplo, para N=10 a resposta é 3, pois é possível escrever N como a soma de três números fatoriais: 10 = 3! + 2!+2!. Para N= 25 a resposta é 2, pois é possível escrever N como a soma de dois números fatoriais: 25 = 4! + 1!.
+
+Entrada A entrada consiste de uma única linha que contém um inteiro N(1?N?10^5).
+
+Saída Seu programa deve produzir uma única linha com um inteiro representando a menor quantidade de números fatoriais cuja soma é igual ao valor de N.
+
+Entrada 10 Saída 3 Entrada 25 Saída 2
+
+
+
+2)MARATONA
+
+A maratona é talvez a prova mais desgastante entre as modalidades olímpicas: são quarenta e dois mil, cento e noventa e cinco metros de percurso. Por isso, os organizadores sempre posicionam vários postos de água ao longo do trajeto da prova, onde copos de água são distribuídos aos competidores. Juvenal é um jovem atleta que tem boas chances de se tornar um maratonista de primeira linha. No entanto, Juvenal descobriu que somente consegue terminar uma maratona se ingerir alguns copos de água durante o percurso. O Laboratório de Biomecânica da universidade local, através de experimentos, determinou que Juvenal consegue percorrer exatamente mais dois mil metros após o instante em que ingere um copo de água. A distância que Juvenal consegue percorrer após ingerir um copo de água é denominada de distância intermediária máxima. Assim, se a distância entre dois postos de água consecutivos no percurso da maratona for sempre menor ou igual do que a distância intermediária máxima de Juvenal, ele consegue terminar a prova. Caso contrário ele n ?ao consegue terminar a prova. O Laboratório de Biomecânica quer agora realizar estudos similares com outros maratonistas, que têm valor de distâncias intermediárias máximas distintas, e precisa de sua ajuda.
+
+Tarefa Sua tarefa é escrever um programa que, dada a posição dos postos de água ao longo do percurso, e a distância intermediária máxima de um atleta, determine se o atleta consegue ou não completar a prova. Entrada A entrada contém um único conjunto de testes, que deve ser lido do dispositivo de entrada padrão (normalmente o teclado). A primeira linha da entrada contém dois números inteiros N e M, separados por um espaço em branco, indicando respectivamente o número de postos de água (2?N?10000) e a distância intermediária máxima de um atleta, em metros (1?M?42195). A segunda linha contém N números inteiros Pi, separados por um espaço em branco, representando a posição dos postos de água ao longo do trajeto da maratona. A posição de um posto de água é dada pela distância, em metros, do início do percurso até o posto de água (0?Pi?42195 para 1?i?N). O primeiro posto de água está sempre localizado no ponto de partida (ou seja, P1= 0) e todos os postos estão em posições distintas. Além disso, os postos de água são dados na ordem crescente de sua distância ao início do percurso. Note que a distância total da prova é a oficial para a maratona, ou seja, 42195 metros.
+
+Saída Seu programa deve imprimir, na saída padrão, uma única linha contendo o caractere ‘S’ se o atleta consegue terminar a prova, ou o caractere ‘N’ caso contrário.
+
+Entrada
+
+3 20000
+
+0 20000 33333
+
+Saída
+
+S
+
+Entrada
+
+8 6000
+
+0 6000 12000 18000 24000 32000 37000 40000
+
+Saída
+
+N
+
+3)PERÇA PERDIDA
+
+Juvenal adora quebra-cabeças, essa é sua brincadeira favorita. O grande problema, porém, é que às vezes o jogo vem com uma peça faltando. Isso irrita bastante o pobre menino, que tem de descobrir qual peça está faltando e solicitar uma peça de reposição ao fabricante do jogo. Sabendo que o quebra-cabeças tem N peças, numeradas de 1 a N e que exatamente uma está faltando, ajude Juvenal a saber qual peça ele tem de pedir.
+
+Tarefa Escreva um programa que, dado um inteiro N e N - 1 inteiros numerados de 1 a N, descubra qual inteiro está faltando.
+
+Entrada A entrada contém um único conjunto de testes, que deve ser lido do dispositivo de entrada padrão (normalmente o teclado). A entrada contém 2 linhas. A primeira linha contém um inteiro N (2 ? N ? 1.000). A segunda linha contém N - 1 inteiros numerados de 1 a N (sem repetições).
+
+Saída Seu programa deve imprimir, na saída padrão, uma única linha, contendo o número que está faltando na sequência dada.
+
+Exemplos Entrada
+
+3 3 1
+
+Saída
+
+2
+
+Entrada
+
+5 1 2 3 5
+
+Saída
+
+4
+
+Entrada
+
+4 2 4 3
+
+Saída
+
+1
+
+4)QUEBRANDO A BANCA
+
+Juvenal e seu parceiro Leôncio estavam voltando para casa quando receberam uma ligação de Tobias, gerente do banco a qual são clientes. Tobias falou que houve um grande problema no saldo de usuários do banco: foram, acidentalmente, concatenados (em posições aleatórias) inteiros em cada saldo e não existe um backup para se descobrir o valor antigo, mas o banco sabe quantos caracteres foram concatenados em cada saldo. Para resolver a situação o banco resolveu retirar caracteres do saldo. Juvenal, que não ia aceitar perder dinheiro, obrigou o banco a deixar o saldo o maior possível quando se retirassem os caracteres. Por exemplo, se eu sei que o saldo é 1435 e sabendo que existem 2 caracteres extras nesse saldo, posso concluir que devo apagar os números 1 e 3 para gerar o maior saldo possível: 45. Leôncio conhece (superficialmente) os conceitos de Estruturas de Dados, logo precisa de sua ajuda para descobrir as maiores sequências possíveis que podem ser formadas ao se retirar caracteres.
+
+Formato de Entrada Vão existir vários casos de teste. (use endOfFile) Cada caso é formado por A e B 1 <= B < A <= 10^5 seguido na linha abaixo por A caracteres (o primeiro digito nunca vai ser zero) que representam inteiros, B é a quantidade de dígitos que você deve apagar.
+
+Formato de Saída Imprima o maior saldo possível que pode existir depois da retirada de caracteres.
+
+Exemplos Entrada:
+
+5 3
+
+15342
+
+3 1
+
+123
+
+2 1
+
+11
+
+Saída:
+
+54
+
+23
+
+1
+
+5)JUVENAL NÃO TEM O QUE FAZER
+
+Juvenal estava sem ter o que fazer em uma sexta-feira imprensada e resolveu criar uma função, porém ele não sabe se ela sempre termina, já que é recursiva. A função é a seguinte:
+
+F(n) = {
+
+1, se n = 1
+
+F(n/2), se n for par
+
+F(3*n+1), se n for ímpar
+
+}
+
+Juvenal definiu outra função: G(n) = quantas chamadas recursivas são necessárias para que F(n) atinja o caso base. Agora, dado dois inteiros A e B, Juvenal quer saber qual o maior valor que a função G assume quando n está no intervalo [A,B]. Formato de Entrada A primeira linha contém T, o número de casos de teste. Cada caso de teste contém dois números, A e B.
+
+Restrições 1 <= T <= 100
+
+1 <= A<=B <= 10^5
+
+Formato de Saída Para cada caso imprima "Caso X: Y", onde X é o número do caso de teste atual e Y é o que Juvenal quer saber. Ex: Caso 1: 20
+
+Caso 2: 125
+
+Caso 3: 89
+
+Caso 4: 174
+
+Exemplos. NÃO HÁ LINHAS EM BRANCO NEM NA ENTRADA NEM NA SAÍDA
+
+Entrada:
+
+4
+
+1 10
+
+100 200
+
+201 210
+
+900 1000
+
+Saída:
+
+Caso 1: 20
+
+Caso 2: 125
+
+Caso 3: 89
+
+Caso 4: 174
+
+6)A COITADA DA ORTOGRAFIA
+
+Juvenal participou de várias edições da Maratona de Programação e ganhou três campeonatos seguidos (sozinho). Ele foi aluno revelação do BSI. Isso abriu o olho de um famoso serviço de busca nordestino chamado “Quede?”. A empresa contratou Juvenal antes mesmo de ele poder beber legalmente. Algumas empresas concorrentes do Quede? acharam isso assédio. Mas já era. Dormiram no ponto.
+
+Quede? está muito preocupada com a crescente taxa de erros de ortografia de seus usuários. Juvenal pensa que as pessoas não têm mais o menor pudor em assassinar a língua materna, talvez até esteja na moda (Juvenal tem opiniões sobre tudo!). No entanto, esses erros tornam mais difíceis as buscas por palavras chaves, que constantemente contêm erros de algumas letras, devidos a má digitação ou má ortografia. O serviço funciona com base num dicionário de palavras. O usuário deve inserir uma palavra num campo de um formulário; o serviço então procura esta palavra no dicionário e retorna conteúdo que tenha relação com a palavra. Para contornar o problema de ortografia, designaram Juvenal para fazer um programa que tenta adivinhar qual palavra o usuário pretendia procurar, independente de haver erros de ortografia nela. Para este problema, Juvenal definiu a distância entre duas palavras A e B como sendo o número de operações, descritas abaixo, necessárias para transformar A em B:
+
+Retirar uma letra de A.
+Adicionar uma letra a A, em qualquer posição.
+Trocar qualquer letra de A por outra letra, na mesma posição.
+O serviço de busca definiu que a palavra P fornecida pelo usuário pode se referir a uma palavra D do dicionário se está a uma distância de no máximo 2 de D. Exemplos:
+
+A palavra ‘tu’ pode se referir `a palavra do dicionário ‘tubo’, realizando duas vezes a operação 2.
+A palavra ‘crto’ pode se referir `a palavra do dicionário ‘corte’, realizando uma vez a operação 2 e uma vez a operação 3.
+A palavra ‘crto’ pode se referir `a palavra do dicionário ‘curto’, realizando uma vez a operação 2.
+A palavra ‘hortgrafea’ não pode se referir `a palavra do dicionário ‘ortografia’.
+Juvenal deve escrever um programa que, dado um dicionário de palavras, descubra para cada palavra fornecida pelo usuário a quais palavras do dicionário ela pode se referir, nas condições descritas acima. A vida de playboy não está deixando Juvenal escrever esse programa, assim ele pediu sua ajuda para fazê-lo (Juvenal vai ficar te devendo muitos favores neste semestre).
+
+Entrada A entrada contém um único conjunto de testes, que deve ser lido do dispositivo de entrada padrão. A primeira linha contém 2 inteiros N, M, representando respectivamente o número de palavras contidas no dicionário (1<=N<=1000) e o número de palavras a serem analisadas (1<=M <=100). Cada uma das N linhas seguintes conterá uma palavra pertencente ao dicionário. Cada uma das M linhas seguintes conterá uma palavra a ser analisada, fornecida pelo usuário. Cada palavra pode ter de 1 a 20 letras, contendo apenas letras de ‘a’ a ‘z’, minúsculas.
+
+Saída Seu programa deve imprimir, na saída padrão, M linhas, sendo uma linha para cada palavra fornecido pelo usuário. Cada linha deve conter todas palavras do dicionário `as quais a palavra fornecida pode se referir. No caso de haver mais de uma palavra em uma linha da resposta, elas devem ser separadas por um espaço em branco, aparecendo na ordem que elas foram dadas na entrada, como pode ser visto no exemplo de saída abaixo. No caso de não haver nenhuma palavra em uma linha da resposta, deixe-a em branco.
+
+Exemplo de entrada
+
+3 3
+
+pato
+
+pateta
+
+caneca
+
+pat
+
+ccanecos
+
+pata
+
+Exemplo de saída
+
+pato
+
+pato pateta
+
+7)JUVENAL VAI DISPUTAR AS OLIMPÍADAS
+
+Juvenal vai disputar as Olimpíadas de inverno na modalidade do Curling masculino. Ele é o único atleta que também está em competições de programação. Sabendo da polivalência e eficiência de Juvenal, o comitê olímpico pediu para ele implementar um programa que gere a classificação final dos países, considerando o número de medalhas recebidas pelos atletas de cada país nessas olimpíadas. Como Juvenal quer muito a medalha de ouro, ele pediu para você escrever esse sistema e assim ele poder focar nas vassouras. Tarefa Sua tarefa é escrever um programa que, dada a informação dos países que receberam medalhas de ouro, prata e bronze em cada modalidade, gere a lista de classi?cação dos países na competição. Nesta tarefa, os países serão identi?cados por números inteiros. O melhor colocado deve ser o país que conseguiu o maior número de medalhas de ouro. Se houver empate entre países no número de medalhas de ouro, o melhor colocado entre esses é o país que conseguiu o maior número de medalhas de prata. Se houver empate também no número de medalhas de prata, o melhor colocado entre esses é o país que recebeu o maior número de medalhas de bronze. Se ainda assim houver empate entre dois países, o melhor classi?cado é o que tem o menor nu´mero de identi?cação. Entrada A entrada contém um único conjunto de testes, que deve ser lido do dispositivo de entrada padrão (normalmente o teclado). A primeira linha da entrada contém dois números inteiros N e M, separados por um espaço em branco, indicando respectivamente o número de países (1 ? N ? 100) e número de modalidades esportivas envolvidas na competição (1?M ?100). Os países são identificados por números inteiros de 1 a N. Cada uma das M linhas seguintes contém três números inteiros O, P e B, separados por um espaço em branco, representando os países cujos atletas receberam respectivamente medalhas de ouro (1?O ?N), prata (1?P ?N) e bronze (1?B ?N). Assim, se uma das M linhas contém os números 3 2 1, significa que nessa modalidade a medalha de outro foi ganha pelo país 3, a de prata pelo país 2 e a de bronze pelo país 1. Saída Seu programa deve imprimir uma linha contendo N números, separados por um espaço em branco, representando os países na ordem decrescente de classificação (o primeiro nu´mero representa o país que é o primeiro colocado, o segundo número representa o país que é o segundo colocado, e assim por diante).
+
+Exemplos
+
+Entrada
+
+2 2
+
+2 1 2
+
+1 2 2
+
+Saída
+
+2 1
+
+Entrada
+
+4 3
+
+3 2 1
+
+4 3 1
+
+4 3 1
+
+Saída
+
+4 3 2 1
+
+Entrada
+
+3 3
+
+3 1 2
+
+2 3 1
+
+1 2 3
+
+Saída
+
+1 2 3
+
+8) NOTAÇÃO POLONESA
+
+Na notação usual de expressões aritméticas, chamada notação "infixa",
+os operadores são escritos entre os operandos. Por exemplo:
+7 - 4 + 2
+O problema é que podemos ter expressões ambíguas, por exemplo, a
+última expressão acima poderia ser interpretada como:
+( ( 7 - 4 ) + 2 ) = 5
+ou como
+( 7 - ( 4 + 2 ) ) = 1.
+Alternativamente, na Notação Polonesa, ou notação prefixa, os operadores
+são escritos antes dos operandos e, nesse caso, os parênteses não são
+necessários pois não há ambiguidade. As duas últimas expressões acima,
+por exemplo, são escritas respectivamente como
++ - 7 4 2
+e
+- 7 + 4 2
+Em qualquer que seja a notação, a expressão continua sendo avaliada de
+"dentro para fora", sendo que, na notação prefixa, quanto mais "interna"
+a operação, mais à direita ela aparece. Assim, o primeiro operador é o mais
+externo e o último é o mais interno.
+A avaliação de uma expressão aritmética em notação prefixa com operadores
+estritamente binários é feita através do seguinte algoritmo:
+Leia a expressão da direita para a esquerda
+Para cada token lido
+{
+ se for operando então
+ empilha-o numa pilha
+ se for operador então
+ {
+ operando1 = desempilha um elemento
+ operando2 = desempilha um elemento
+ calcula operando1 operador operando2
+ empilha o resultado na pilha
+ }
+}
+retorna o topo da pilha como resultado
+Nosso problema consiste em implementar esse método de avaliação de expressões
+em notação prefixa.
+Formato de Entrada
+A entrada consiste de várias linhas, cada uma correspondendo a uma expressão
+aritmética escrita em notação prefixa. Por simplicidade, temos que:
+1) Os operandos são apenas números naturais
+2) A expressão envolve apenas os operadores binários +, -, *. e /.
+3) Os tokens são separados por espaços.
+DICA:
+A função split() do python divide uma string em um array de tokens (strings).
+Exemplo:
+"* + 10 20 30" ---> {"*", "+", "10", "20", "30"}
+Formato de Saída
+Para cada expressão do arquivo de entrada, o programa deve imprimir, no arquivo
+de
+saída, uma linha com o resultado da avaliação.
+Importante:
+1) O operador "/" deve ser interpretado na aritmética inteira. Assim,
+por exemplo
+/ 10 4 = 2.
+2) Nenhuma expressão conterá uma divisão por zero.
+Exemplos
+Entrada:
+* 199 - + 725 148 + 902 885
++ - + 879 608 842 - - 251 43 906
+- 484 390
++ 635 + + 114 927 557
+- 224 - + 18 309 - 620 683
++ + + 403 408 - 917 853 + + 568 791 + 692 322
+/ + 162 661 + 2 + 932 6
+/ + - 837 35 - 332 124 - - 260 605 - 751 463
+/ + 376 - 466 399 + * 310 707 378
+- 782 197
+Saída:
+-181886
+-53
+94
+2233
+-166
+3248
+0
+-1
+0
+585
+//cursor aqui
+
+9) JUVENAL NÃO QUER LAVAR A LOUÇA
+
+Juvenal é conhecido pelas ótimas festas que organiza em sua casa de praia em Natal. Elas são sempre
+muito badaladas. Mas ele não é bobo e sempre diz que existe uma condição. Ele aceita fornecer a casa,
+a comida e a piscina, contanto que algum dos convidados fique para lavar a louça. Como todos querem
+as festas, mas ninguém quer ficar para limpar a bagunça, eles sempre decidem isso em um jogo de
+sorte. O jogo é assim:
+Cada convidado começa com um monte de cartas na mão, e existe outro monte na mesa.
+A cada rodada, uma carta do monte da mesa é descoberta e cada convidado faz o mesmo com o seu
+próprio monte.
+Caso a carta que um convidado tire seja de mesmo número que a carta presente na mesa, o convidado
+descarta ela de sua mão (ela não será mais usada!).
+Caso a carta seja de número diferente, ela volta para o final da pilha de cartas do convidado.
+A carta da mesa sempre volta para o final do monte da mesa (podendo, inclusive, ser reutilizada!).
+O convidado sortudo será o primeiro que ficar sem cartas na mão (Torça para não ser você!).
+Caso o jogo não termine em 1000 rodadas, Juvenal será o ganhador.
+Formato de Entrada
+A entrada inicia com um inteiro F, que indica quantas festas Juvenal realizou. A próxima linha indica
+a configuração inicial do deck na mesa, na ordem em que as cartas deverão aparecer (primeira carta
+é a primeira que sai). As cartas têm valores entre 0 e 10^5. As próximas linhas representam os decks
+de cada convidado. Cada convidado é representado por um inteiro C, começando de 1 e contando. O
+fim de cada caso é representado pelo número -1.
+Restrições: 0 < F <= 10^5
+Formato de Saída
+Para cada caso, imprima C o número identificador da pessoa que ganhou (Juvenal tem o número 0).
+Caso haja empate, opte sempre pelo convidado de menor identificador. O baralho é velho, formado
+pela junção de vários decks incompletos. É possível encontrar cartas repetidas. Para todos os
+convidados terem chance de vencer, é garantido que o deck da mesa tem qualquer carta que possa
+aparecer na mão de um convidado.
+Exemplos
+Entrada:
+2
+1 7 3 2 4
+2 3 1
+1 7 4
+1 2 1 3
+-1
+1 2 3 4
+2 1
+4 3
+-1
+Saída:
+2
+0
+//cursor aqui
+
+10) O LOBO MAL E AS OVELHAS DE JUVENAL
+
+Na fazenda de Juvenal existe um certo número de ovelhas. Enquanto elas estão
+dormindo profundamente, alguns lobos famintos tentam invadir a fazenda e
+atacar as ovelhas. Ovelhas normais ficariam indefesas diante de tal ameaça,
+mas felizmente as ovelhas de Juvenal são praticantes de artes marciais e
+conseguem defender-se adequadamente. A fazenda possui um formato
+retangular e consiste de campos arranjados em linhas e colunas. Cada campo
+pode conter uma ovelha (representada pela letra ‘k’), um lobo (letra ‘v’), uma
+cerca (símbolo ‘#’) ou simplesmente estar vazio (símbolo ‘.’). Consideramos que
+dois campos pertencem a um mesmo pasto se podemos ir de um campo ao outro
+através de um caminho formado somente com movimentos horizontais ou
+verticais, sem passar por uma cerca. Na fazenda podem existir campos vazios
+que não pertencem a nenhum pasto. Um campo vazio não pertence a nenhum
+pasto se é possível “escapar” da fazenda a partir desse campo (ou seja, caso
+exista um caminho desse campo até a borda da fazenda). Durante a noite, as
+ovelhas conseguem combater os lobos que estão no mesmo pasto, da seguinte
+forma: se em um determinado pasto houver mais ovelhas do que lobos, as
+ovelhas sobrevivem e matam todos os lobos naquele pasto. Caso contrário, as
+ovelhas daquele pasto são comidas pelos lobos, que sobrevivem. Note que caso
+um pasto possua o mesmo número de lobos e ovelhas, somente os lobos
+sobreviverão, já que lobos são predadores naturais, ao contrário de ovelhas.
+Tarefa
+Escreva um programa que, dado um mapa da fazenda de Juvenal indicando a
+posição das cercas, ovelhas e lobos, determine quantas ovelhas e quantos lobos
+estarão vivos na manhã seguinte.
+Entrada
+A entrada contém um único conjunto de testes, que deve ser lido do arquivo de
+entrada. A primeira linha da entrada contém dois inteiros R e C que indicam o
+número de linhas (3<=R<=250) e de colunas (3<=C<=250) de campos da
+fazenda. Cada uma das R linhas seguintes contém C caracteres, representando
+o conteúdo do campo localizado naquela linha e coluna (espaço vazio, cerca,
+ovelha ou lobo).
+Saída
+Seu programa deve imprimir, no arquivo de saída, uma única linha, contendo
+dois inteiros, sendo que o primeiro representa o número de ovelhas e o segundo
+representa o número de lobos que ainda estão vivos na manhã seguinte. 
+
+Exemplos:
+
+Entrada
+6 6
+...#..
+.##v#.
+#v.#.#
+#.k#.#
+.###.#
+...###
+Saída
+0 2
+
+
+Entrada
+8 8
+.######.
+#..k...#
+#.####.#
+#.#v.#.#
+#.#.k#k#
+#k.##..#
+#.v..v.#
+.######.
+Saída
+3 1
+
+
+Entrada
+9 12
+.###.#####..
+#.kk#...#v#.
+#..k#.#.#.#.
+#..##k#...#.
+#.#v#k###.#.
+#..#v#....#.
+#...v#v####.
+.####.#vv.k#
+.......####
+Saída
+3 5
+
+12)JUVENAL VAI AO BANCO BRIGAR
+
+Revoltado com o embaraço do banco com o problema de seu saldo, Juvenal foi ao
+banco para pedir satisfações. Mas, como o banco é um banco, ele teve que pegar
+uma fila para falar com alguém, e só havia caixas trabalhando naquele dia. Nessa
+agência, existiam dois caixas funcionando, um preferencial e um normal. Também
+existem duas filas, uma regular e outra preferencial.
+Quando o caixa A está disponível, a próxima pessoa da fila regular é chamada.
+Quando o caixa B está disponível, a primeira pessoa da fila preferencial é
+chamada.
+Se uma das filas estiver vazia, os caixas atendem pessoas de qualquer uma das
+filas.
+Formato de Entrada
+A entrada começa com um inteiro T, que indica o número de casos de teste.
+Cada caso começa com um inteiro N que indica quantos comandos terá o caso.
+Cada pessoa que chega na fila contém um número de identificação.
+As próximas N linhas contém os comandos:
+"f x" = chegou uma pessoa com identificação x na fila regular.
+"p x" = chegou uma pessoa com identificação x na fila preferencial.
+"A" = o caixa A chama a próxima pessoa.
+"B" = o caixa B chama a próxima pessoa.
+"I" = imprima, em uma linha, as pessoas que estão na frente das filas f e p,
+nessa ordem. Se nenhuma pessoa estiver na fila, imprima 0.
+Para cada caso de teste, as filas começam vazias.
+Podem existir pessoas diferentes com identificações iguais.
+1 <= T <= 1000
+1 <= N <= 10000
+1 <= x <= 100
+Formato de Saída
+Para cada caso de teste, imprima "Caso y:"
+para cada vez que aparecer o comando "I", imprima em uma linha as primeiras
+pessoas das filas f e p, nessa ordem.
+Obs: O cursor deve estar na última linha (em branco).
+Exemplos
+Entrada:
+3
+6
+f 3
+I
+p 5
+p 7
+A
+I
+15
+f 5
+f 7
+f 2
+A
+B
+I
+p 10
+f 4
+B
+A
+I
+p 11
+p 13
+B
+I
+1
+I
+Saída:
+Caso 1:
+3 0
+0 5
+Caso 2:
+2 0
+4 0
+4 13
+Caso 3:
+0 0
+//cursor aqui
+
+13) JUVENAL SE PERDEU
+
+Juvenal estava fazendo trilhas com um grupo de amigos perto de Pipa. Ele se distraiu com um
+golfinho saltando para pegar uma borboleta. O seu grupo sumiu e o pobre diabo vagou pela mata
+por muitas semanas. Até que, um dia, um casal apaixonado que fugira dos pais para viver seu
+romance encontrou Juvenal.
+A aventurada figura havia se tornado quase selvagem e tudo no qual ele pensava era sobreviver em
+meio àquelas árvores. Ele foi internado em um manicômio e começou a pensar naquele conjunto de
+raízes, galhos e folhas como estruturas úteis para seus devaneios em busca de frutas já não mais
+reais.
+Juvenal, agora, pede para que você o ajude a tornar aquelas árvores, através da computação, em
+algo mais tangível. Como o intrépido rapaz enxergava as árvores como estruturas binárias de busca,
+você deve implementar tais mecanismos que forneçam um número de operações, que um dia
+ajudaram Juvenal a encontrar os recursos que o salvaram da morte certa.
+Formato de Entrada
+A árvore binária de busca implementada deve ser tal que para todo nó X, chave[X.esquerda]
+<= chave[X] < chave[X.direita].
+Existem os seguintes comandos que o código deve ser capaz de tratar:
+A x // Inserir x
+B x // Remover, se existir, o x que estiver mais próximo da raiz da árvore
+C x // Imprimir o maior valor da árvore que é menor que x, se não existir imprima 0
+PRE // Imprimir a árvore em pré-ordem, caso esteja vazia imprima 0
+IN // Imprimir a árvore em order, caso esteja vazia imprima 0
+POST // Imprimir a árvore em pós-order, caso esteja vazia imprima 0
+Vão existir vários casos. Cada caso começa um 1<=N<=10^5 indicando a quantidade de comandos
+do caso.
+1<=x<=10000
+Formato de Saída
+Caso k: // onde k é o número do caso (começando de 1)
+Exemplos
+Entrada:
+11
+A 5
+A 1
+A 2
+A 6
+A 6
+C 6
+B 2
+B 6
+PRE
+IN
+POST
+2
+C 1
+PRE
+Saída:
+Caso 1:
+5
+5 1 6
+1 5 6
+1 6 5
+Caso 2:
+0
+0
+//cursor aqui
+
+14)JUVENAL É CINÉFILO
+
+Juvenal adora a 7a arte. Ele possui uma ampla coleção de longas e curtas metragens dos mais
+variados e peculiares gêneros.
+Para organizar sua coleção, ele pediu para você implementar bancos de dados estruturados em
+formato de árvores AVL, um para cada gênero existente.
+Ele pediu para que fosse possível inserir novos filmes e obter uma relação de películas lançadas em
+um certo período, o que é possível porque os números de série seguem uma ordem cronológica, um
+número de série maior significa um item mais recente.
+Como o sistema ainda está em fase beta, você decidiu implementar a função NIVEL para verificar
+se tudo está ocorrendo bem.
+Embora Juvenal seja desorganizado (as idas a Pipa reduzem o seu foco), ele tem certeza que não
+possui duas cópias de um mesmo filme.
+Formato de Entrada
+O primeiro número C indica a quantidade de gêneros que serão catalogados. 0< C < = 10^5
+A partir daí, seguirão uma série de instruções: Os números de série n são inteiros, 0< n< 10^5.
+I n = inserir o numero de série n
+N n = encontrar o nível em que o número de série n se encontra.
+L n1 n2 = relação dos filmes lançados entre n1 e n2.
+F : F indica que não existem mais filmes deste gênero.
+Formato de Saída
+Para cada função:
+N : imprima o nível da árvore AVL em que o filme se encontra. O nível da raiz da árvore é 1, o nível
+de um filho é o nível do pai +1. Caso o filme não esteja no banco, imprima -1.
+L : imprima todos os filmes lançados a partir de n1 e até n2 (incluindo n1 e n2, caso eles estejam no
+banco) em ordem cronológica. Caso não existam filmes no periodo, imprima "-1".
+Pule uma linha entre cada gênero.
+Exemplos
+Entrada:
+2
+I 2
+I 4
+I 3
+I 7
+N 3
+I 6
+N 4
+N 7
+N 8
+F
+I 5
+I 6
+I 3
+I 7
+N 7
+I 4
+I 2
+I 9
+N 7
+I 8
+N 8
+L 1 8
+F
+Saída:
+1
+3
+3
+-1
+3
+2
+4
+2 3 4 5 6 7 8
+
+15)O SINDICATO DAS AEROMOÇAS
+
+Com a crise, o SIAMOÇA (Sindicato das Aeromoças) resolveu reunir seus membros para
+discutir as novas relações trabalhistas. Percebendo que empregados isolados não teriam
+chance de sair com um acordo satisfatório com as empresas aéreas, as aeromoças e
+moços decidiram que a única maneira de terem alguma vantagem é se unirem. Então
+resolveram se encontrar em alguma cidade para discutir sobre a profissão. O grande
+problema desse tipo de encontro é que os membros estão espalhados pelo mundo inteiro,
+uma vez que a profissão exige que eles viajem para diversos lugares todos os dias. Por
+isso, a escolha da cidade onde será feita a reunião sempre é de modo que não prejudique
+demais nenhuma das aeromoças e moços. O critério para tal é que a maior das distâncias
+percorridas pelas aeromoças para chegar ao local da reunião deve ser a menor possível.
+Ou seja, a distância percorrida pela aeromoça que vai percorrer a maior distância entre
+todas as comissárias para chegar à reunião deve ser a menor possível.
+Tarefa
+Dadas as cidades onde se encontram as aeromoças e a descrição das estradas que
+interligam essas cidades, escreva um programa que determina qual será a menor
+distância máxima percorrida por uma aeromoça para chegar até o local da reunião. As
+comissárias conhecem bem os voos, e portando sempre fazem o menor caminho possível
+até a cidade da reunião. Obviamente, sempre existe um caminho ligando quaisquer duas
+cidades.
+Entrada
+A primeira linha da entrada possui dois números inteiros N (2 ? N ? 100) e M ( N ? 1 ? M ?
+10000), que representam, respectivamente, o número de cidades e o número de voos que
+as interligam. As cidades são identificadas por números inteiros entre 0 e N ? 1. As
+próximas M linhas da entrada possuem, cada uma, a descrição de um voo. Cada
+descrição de entrada é composta por três números inteiros:
+U, V e W, onde U e V representam cidades (0 ? U ? N ? 1 e 0 ? V ? N ? 1) e W representa
+a distância do voo que une essas duas cidades (todas os voos são ida e volta, 1 ? W ?
+100. É sempre possível viajar entre qualquer duas cidades com os voos existentes, mas
+pode haver mais de um voo ligando o mesmo par de cidades.
+Saída
+Seu programa deve imprimir uma única linha contendo um número inteiro, a distância
+máxima percorrida por uma aeromoça para ir à reunião, obedecidas as restrições
+estabelecidas (ou seja, essa distância máxima deve ser a menor possível).
+Exemplos
+Entrada
+4 4
+0 1 2
+0 2 4
+1 3 1
+2 3 5
+Saída
+4
+Entrada
+4 5
+0 1 2
+0 2 4
+1 3 1
+2 3 5
+3 2 2
+Saída 3
+Entrada
+7 12
+0 1 22
+0 2 30
+0 5 35
+1 5 11
+1 6 30
+1 2 25
+2 3 15
+2 6 10
+3 4 15
+3 5 10
+4 5 20
+5 6 33
+Saída 3
+
+16)UIQUIPEDIA
+
+Uma das grandes vantagens da Uiquipedia sobre enciclopedias de papel e a facilidade de
+seguir referencias; com um simples clique, e possível ir de um artigo para outro
+relacionado. Essas referencias sao chamadas de referencias diretas. Tambem e poss??vel
+navegar a Uiquipedia sequencialmente: cada artigo possui referencia para o artigo
+anterior e para o posterior, na ordem alfabetica. Essas referencias sao chamadas de
+referencias sequenciais. Por exemplo, um artigo para o termo “Elefantea pode ter uma
+referencia direta para “Mamíferosa em seu texto, desta forma pode-se chegar de
+“Elefantea a “Mamíferosa em um clique. Observe que pode nao existir a referencia direta
+contraria, ou seja, de “Mamíferosa para “Elefantea. Adicionalmente se “Elevadora e o
+proximo artigo depois de “Elefantea, na ordem alfabetica, pode-se ir com um clique de
+“Elefantea para “Elevadora e de “Elevadora para “Elefantea, pois ha uma referencia
+sequencial entre eles. Paulo e Andre sao dois amigos que contribuem para a Uiquipedia.
+Muitas vezes, Andre edita um artigo e quer que Paulo o ajude a revisar a modificacao. A
+conexao de Paulo a Internet e lenta, e por isso ele quer chegar na pagina que Andre
+editou usando o menor numero de cliques possível, comecando do artigo em que esta, e
+navegando apenas por referencias, diretas ou sequenciais.
+Tarefa
+Escreva um programa que, dados todas as referencias diretas existentes na Uiquipedia, a
+pagina onde Paulo esta, e a pagina editada por Andre, determina de quantos cliques
+Paulo precisa, no m??nimo, para ver a pagina que foi modificada por Andre, utilizando as
+referencias diretas e sequenciais.
+Entrada
+A entrada contem um unico conjunto de testes, que deve ser lido do dispositivo de entrada
+padrao. A primeira linha contem um unico inteiro, N, que e o numero de referencias da
+Uiquipedia (1 ? N ? 1.000). As N linhas contem cada uma duas strings X e Y, separadas
+por um espaco, que sao os nomes de duas paginas da Uiquipedia conectadas por uma
+referencia direta (de X para Y ). Todo artigo existente na Uiquipedia aparece pelo menos
+uma vez na descricao das referencias diretas, permitindo que as referencias sequenciais
+sejam extraídas das informacões dadas. Note que uma referencia direta pode ligar duas
+paginas que estariam ligadas tambem por uma referencia sequencial. Depois da
+descricao das referencias, ha uma linha em branco, e a linha seguinte contem duas
+cadeias de caracteres, P e A, que sao a pagina atual de Paulo e a pagina editada por
+Andre. O nome de cada pagina e limitado a 100 caracteres e contem somente letras
+maiusculas, letras minusculas e o s??mbolo ’_’. Observe que na ordem alfabetica o símbolo
+’_’ e anterior as letras maiusculas, que por sua vez sao anteriores as letras minusculas.
+Sa??da
+Seu programa deve imprimir, na sa??da padrao, uma unica linha, contendo um unico
+inteiro, que diz o numero m??nimo de cliques que sao necessarios para ir da pagina atual
+de Paulo ate a pagina editada por Andre. Sempre e poss??vel navegar de um artigo a outro.
+
+Exemplos:
+
+Entrada
+3
+Pink_Floyd O_Lado_Escuro_Da_Lua
+Pink_Floyd O_Muro
+O_Muro Muro_de_Berlim
+O_Muro O_Lado_Escuro_Da_Lua
+Saída
+1
+
+Entrada
+4
+Chaves Quico
+Quico Chiquinha
+Professor_Girafales Dona_Florinda
+Chaves Dona_Clotilde
+Chaves Chiquinha
+Saída
+1
+
+17)JUVENAL É OBSESSIVO-COMPULSIVO
+
+Todos sabem que Juvenal e um otimo desenvolvedor de software. O que pouca gente
+sabe e que, de perto, ele não e normal. Como quase toda pessoa brilhante, ele tem
+algumas manias estranhas, e uma delas e que tudo que ele faz tem que ser em numero
+par. Muitas vezes essa mania não atrapalha, apesar de causar estranhamento nos outros.
+Alguns exemplos: ele tem que fazer diariamente um numero par de refeic?ese no cafe da
+manhã toma duas x??caras de cafe, duas torradas e duas fatias de queijoe sempre que vai
+ao cinema compra dois bilhetes de entrada (felizmente sempre tem um amigo ou amiga
+lhe acompanhando)e e toma dois banhos por dia (ou quatro, ou seis...). Mas algumas
+vezes essa mania de Juvenal atrapalha. Por exemplo, ninguem gosta de viajar de carro
+com ele, pois se no trajeto ele tem que pagar pedagios, o numero de pedagios que ele
+paga tem que ser par. Juvenal mora em um pa??s em que todas as estradas são
+bidirecionais e tem exatamente um pedagio (ja que ate o ar devera ser privatizado
+eventualmente). Ele precisa ir visitar um cliente em uma outra cidade, e deseja calcular o
+m??nimo valor total de pedagios que ele tem que pagar, para ir da sua cidade a cidade do
+cliente, obedecendo a sua estranha mania de que o numero de pedagios pagos tem que
+ser par.
+Entrada
+A entrada consiste de diversas linhas. A primeira linha contem 2 inteiros C e V , o numero
+total de cidades e o numero de estradas (2 ? C ? 104 e 0 ? V ? 50000). As cidades são
+identificadas por inteiros de 1 a C. Cada estrada liga duas cidades distintas, e ha no
+maximo uma estrada entre cada par de cidades. Cada uma das V linhas seguintes
+contem tres inteiros C1 , C2 e G, indicando que o valor do pedagio da estrada que liga as
+cidades C1 e C2 e G (1 ? C1 , C2 ? C e 1 ? G ? 104 ). Juvenal esta atualmente na cidade
+1 e a cidade do cliente e C.
+Sa??da
+Uma unica linha deve ser impressa, contendo um unico inteiro, o custo total de pedagios
+para Juvenal ir da cidade 1 a cidade C, pagando um numero par de pedagios, ou, se isso
+não for poss??vel, o valor 11.
+Exemplos
+Entrada
+4 4
+1 2 2
+2 3 1
+2 4 10
+3 4 6
+Saída
+12
+Entrada
+5 6
+1 2 3
+2 3 5
+3 5 2
+5 1 8
+2 4 1
+4 5 4
+Saída
+-1
+
+18) REDE ÓTICA DO CACIQUE
+
+Os caciques da região de Tutuaçu pretendem integrar suas tribos à chamada “aldeia
+global”. A primeira providência foi a distribuição de telefones celulares a todos os pajés.
+Agora, planejam montar uma rede de fibra ótica interligando todas as tabas. Esta
+empreitada requer que sejam abertas novas picadas na mata, passando por reservas de
+flora e fauna. Conscientes da necessidade de preservar o máximo possível o meio
+ambiente, os caciques encomendaram um estudo do impacto ambiental do projeto. Será
+que você consegue ajudá-los a projetar a rede de fibra ótica?
+Tarefa
+Vamos denominar uma ligação de fibra ótica entre duas tabas de um ramo de rede. Para possibilitar
+a comunicação entre todas as tabas é necessário que todas elas estejam interligadas, direta
+(utilizando um ramo de rede) ou indiretamente (utilizando mais de um ramo). Os caciques
+conseguiram a informação do impacto ambiental que causará a construção dos ramos. Alguns
+ramos, no entanto, nem foram considerados no estudo ambiental, pois sua construção é impossível.
+Sua tarefa é escrever um programa para determinar quais ramos devem ser construídos, de forma a
+possibilitar a comunicação entre todas as tabas, causando o menor impacto ambiental possível.
+Entrada
+A entrada é composta de vários conjuntos de teste. A primeira linha de um conjunto de teste contém
+dois números inteiros positivos N e M que indicam, respectivamente, o número de tabas e o número
+de ramos de redes possíveis. As tabas são numeradas de 1 a N. As M linhas seguintes contêm três
+inteiros positivos X, Y e Z, que indicam que o ramo de rede que liga a taba X à taba Y tem impacto
+ambiental Z. Com os conjuntos de teste dados sempre é possível interligar todas as tabas. O final da
+entrada é indicado quando N = 0.
+Saída
+Para cada conjunto de teste da entrada seu programa deve produzir uma lista dos ramos de redes
+que devem ser construídos. A lista deve ser precedida de uma linha que identifica o conjunto de
+teste, no formato "Teste n", onde n é numerado a partir de 1. A lista é composta por uma
+sequência de ramos a serem construídos, um ramo por linha. Um ramo é descrito por um par de
+tabas X e Y , com X < Y. Os ramos de rede deverão ser listados na ordem dos do índices X, mas
+não deve haver repetição. Não haverá mais de uma solução possível. O final de uma lista de ramos
+deve ser marcado com uma linha em branco. A grafia mostrada no Exemplo de Saída, abaixo, deve
+ser seguida rigorosamente.
+Exemplo
+
+Entrada:
+3 3
+1 2 10
+2 3 5
+3 1 7
+5 6
+1 2 15
+1 3 12
+2 4 13
+2 5 5
+3 2 6
+3 4 6
+0 0
+
+Saída:
+Teste 1
+1 3
+2 3
+Teste 2
+1 3
+2 3
+2 5
+3 4
+
+Restrições
+0 ? N ? 100 (N = 0 apenas para indicar o fim da entrada)
+1 ? M ? N(N-1)/2
+1 ? X ? 100
+1 ? Y ? 100
+1 ? Z ? 100
+
